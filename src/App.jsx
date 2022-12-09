@@ -80,7 +80,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="chat-bot">
-      <h1>Chat Bot</h1>
+      <h1>Diogenis's Chat Bot</h1>
 
       {/* Display the messages in a list */}
       <ul>
