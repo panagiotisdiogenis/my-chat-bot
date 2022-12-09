@@ -24,7 +24,7 @@ function App() {
 
   const generateResponse = async () => {
     // Your ChatGPT API key
-    // const apiKey = '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'
+    // const apiKey = ''
     const apiKey = import.meta.env.VITE_API_KEY;
       
     // The context for the conversation (previous messages)
