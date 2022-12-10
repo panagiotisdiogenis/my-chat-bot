@@ -10,7 +10,7 @@ function App() {
     event.preventDefault();
 
     // Add the user's input to the messages array
-    setMessages([...messages, { user: true, text: input }]);
+    setMessages(previousMessages => [...previousMessages, { user: true, text: input }]);
 
     // Clear the input field
     setInput('');
@@ -18,7 +18,8 @@ function App() {
     // Generate a response using the ChatGPT API and add it to the messages array
     generateResponse()
       .then((response) => {
-        setMessages([...messages, { user: false, text: response }]);
+
+        setMessages(previousMessages => [...previousMessages, { user: false, text: response }]);
       });
   }
 
@@ -67,7 +68,7 @@ function App() {
         return 'Sorry, I am unable to generate a response at this time.';
       }  
   }
-
+  
   return (
     <div className="App">
       <div>
